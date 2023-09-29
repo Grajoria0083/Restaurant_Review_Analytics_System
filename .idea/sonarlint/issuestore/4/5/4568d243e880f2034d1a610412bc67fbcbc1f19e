@@ -1,0 +1,38 @@
+
+h
+java:S1192""KDefine a constant instead of duplicating this literal "Testy Food" 3 times.(ΫΡ―υ8Ϋ΄γώ­1
+h
+java:S1192("KDefine a constant instead of duplicating this literal "Spicy Food" 3 times.(ϋΉ°±8ά΄γώ­1
+i
+java:S1192"GDefine a constant instead of duplicating this literal "Indian" 5 times.(Δ¤Έόÿÿÿÿ8ά΄γώ­1
+k
+java:S1192!"ODefine a constant instead of duplicating this literal "Delicious Food" 3 times.(έΛ8ά΄γώ­1
+o
+java:S6204J"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8µγώ­1
+o
+java:S6204R"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8‹µγώ­1
+V
+java:S1611Z"4Remove the parentheses around the "review" parameter(ήνρΉύÿÿÿÿ8µγώ­1
+`
+java:S1612Z">Replace this lambda with method reference 'Review::getRating'.(ήνρΉύÿÿÿÿ8µγώ­1
+Q
+java:S1611]"4Remove the parentheses around the "review" parameter(—‚Π8•µγώ­1
+[
+java:S1612]">Replace this lambda with method reference 'Review::getRating'.(—‚Π8–µγώ­1
+H
+java:S1168f"+Return an empty collection instead of null.(¥Ήο8—µγώ­1
+o
+java:S6204o"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8µγώ­1
+F	java:S106q"+Replace this use of System.out by a logger.(Φϋ8™µγώ­1
+H
+java:S1168s"+Return an empty collection instead of null.(¥Ήο8™µγώ­1
+H
+java:S1168x"+Return an empty collection instead of null.(¥Ήο8µγώ­1
+p
+java:S6204€"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8›µγώ­1
+u
+java:S6204†"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(‘ÿ¨—ϊÿÿÿÿ8µγώ­1
+p
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8µγώ­1
+X
+java:S1612":Replace this lambda with method reference 'Entry::getKey'.(³…›η8άΥγώ­1
