@@ -1,0 +1,47 @@
+[
+{
+"userId": 1,
+"name": "Aman",
+"joinedDate": "2023-11-07"
+},
+{
+"userId": 2,
+"name": "Gauarv",
+"joinedDate": "2019-10-02"
+},
+{
+"userId": 3,
+"name": "Rahul",
+"joinedDate": "2021-11-30"
+},
+{
+"userId": 4,
+"name": "Ram",
+"joinedDate": "2023-02-01"
+},
+{
+"userId": 5,
+"name": "Anshi",
+"joinedDate": "2017-02-04"
+},
+{
+"userId": 6,
+"name": "Rohit",
+"joinedDate": "2020-03-16"
+},
+{
+"userId": 7,
+"name": "Pawan",
+"joinedDate": "2018-04-23"
+},
+{
+"userId": 8,
+"name": "Saurabh",
+"joinedDate": "2021-06-18"
+},
+{
+"userId": 9,
+"name": "Gaurav Singh",
+"joinedDate": "2022-07-21"
+}
+]

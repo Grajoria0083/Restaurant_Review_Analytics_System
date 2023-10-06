@@ -1,0 +1,135 @@
+    [
+      {
+      "restaurantId": 5,
+      "userId": 4,
+      "rating": 3,
+      "comment": "Delicious Food",
+      "date": "2023-06-01"
+    },
+    {
+      "restaurantId": 1,
+      "userId": 2,
+      "rating": 5,
+      "comment": "Testy Food",
+      "date": "2023-01-24"
+    },
+    {
+      "restaurantId": 3,
+      "userId": 7,
+      "rating": 2,
+      "comment": "Good Food",
+      "date": "2023-01-24"
+    },
+    {
+      "restaurantId": 4,
+      "userId": 3,
+      "rating": 3,
+      "comment": "distasteful Food",
+      "date": "2021-11-06"
+    },
+    {
+      "restaurantId": 5,
+      "userId": 8,
+      "rating": 4,
+      "comment": "Delicious Food",
+      "date": "2021-06-18"
+    },
+    {
+      "restaurantId": 4,
+      "userId": 5,
+      "rating": 4,
+      "comment": "Flavoursome Food",
+      "date": "2020-02-28"
+    },
+    {
+      "restaurantId": 3,
+      "userId": 6,
+      "rating": 5,
+      "comment": "Testy Food",
+      "date": "2023-05-12"
+    },
+    {
+      "restaurantId": 5,
+      "userId": 8,
+      "rating": 5,
+      "comment": "Spicy Food",
+      "date": "2022-07-03"
+    },
+    {
+      "restaurantId": 2,
+      "userId": 1,
+      "rating": 1,
+      "comment": "enjoyable Food",
+      "date": "2022-06-30"
+    },
+    {
+      "restaurantId": 3,
+      "userId": 7,
+      "rating": 4,
+      "comment": "Delicious Food",
+      "date": "2021-12-12"
+    },
+    {
+      "restaurantId": 4,
+      "userId": 5,
+      "rating": 4,
+      "comment": "Flavoursome Food",
+      "date": "2017-02-28"
+    },
+    {
+      "restaurantId": 2,
+      "userId": 6,
+      "rating": 5,
+      "comment": "Testy Food",
+      "date": "2023-05-12"
+    },
+    {
+      "restaurantId": 5,
+      "userId": 1,
+      "rating": 5,
+      "comment": "Spicy Food",
+      "date": "2022-07-03"
+    },
+    {
+      "restaurantId": 1,
+      "userId": 3,
+      "rating": 1,
+      "comment": "sweet Food",
+      "date": "2019-06-30"
+    },
+    {
+      "restaurantId": 2,
+      "userId": 9,
+      "rating": 3,
+      "comment": "distasteful Food",
+      "date": "2023-12-12"
+    },
+    {
+      "restaurantId": 4,
+      "userId": 4,
+      "rating": 4,
+      "comment": "yummy Food",
+      "date": "2023-02-28"
+    },
+    {
+      "restaurantId": 3,
+      "userId": 5,
+      "rating": 5,
+      "comment": "good Food",
+      "date": "2021-05-12"
+    },
+    {
+      "restaurantId": 2,
+      "userId": 1,
+      "rating": 5,
+      "comment": "Spicy Food",
+      "date": "2022-07-03"
+    },
+    {
+      "restaurantId": 2,
+      "userId": 1,
+      "rating": 1,
+      "comment": "good Food",
+      "date": "2021-11-30"
+    }
+  ]

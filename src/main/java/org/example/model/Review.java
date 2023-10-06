@@ -14,6 +14,7 @@ public class Review {
     private LocalDate date;
 
 
+
     public Review(int restaurantId, int userId, int rating, String comment, LocalDate date) {
         this.restaurantId = restaurantId;
         this.userId = userId;
@@ -57,6 +58,7 @@ public class Review {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
 
     public LocalDate getDate() {
         return date;
