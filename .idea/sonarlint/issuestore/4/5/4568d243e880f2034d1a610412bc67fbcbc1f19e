@@ -1,12 +1,18 @@
 
-]	java:S1252"<This block of commented-out lines of code should be removed.(Æä‹şÿÿÿÿ8¤ìÒÓ¯1
-X	java:S1259"<This block of commented-out lines of code should be removed.(á¨¯Á8îÓÓ¯1
-]	java:S125@"<This block of commented-out lines of code should be removed.(’Ïëıüÿÿÿÿ8ß¡ÓÓ¯1
+‚
+java:S1488©"_Immediately return this expression instead of assigning it to the temporary variable "reviews".(Şœ¹×ûÿÿÿÿ8– Ÿ°1
+p
+java:S1450"SRemove the "gson" field and declare it as a local variable in the relevant methods.(ğŒ©8Ö Ÿ°1
+L	java:S106I"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8ñ Ÿ°1
 e
-java:S1128"CRemove this unused import 'org.apache.tomcat.util.json.JSONParser'.(ö½¥¨ùÿÿÿÿ8ÏÃÒÓ¯1
+java:S1128"CRemove this unused import 'org.apache.tomcat.util.json.JSONParser'.(ö½¥¨ùÿÿÿÿ8Š¡Ÿ°1
 Q
-java:S1128"/Remove this unused import 'org.json.JSONArray'.(¬¸Ê’üÿÿÿÿ8ÏÃÒÓ¯1
+java:S1128"/Remove this unused import 'org.json.JSONArray'.(¬¸Ê’üÿÿÿÿ8‹¡Ÿ°1
 U
-java:S1128"3Remove this unused import 'org.json.JSONException'.(¹Ó·úÿÿÿÿ8ÏÃÒÓ¯1
+java:S1128"3Remove this unused import 'org.json.JSONException'.(¹Ó·úÿÿÿÿ8‹¡Ÿ°1
 R
-java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8ÏÃÒÓ¯1
+java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8‹¡Ÿ°1
+@
+java:S1128"$Remove this unused import 'java.io'.(¬›ãD8‹¡Ÿ°1
+Z
+java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8‹¡Ÿ°1

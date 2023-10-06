@@ -1,5 +1,6 @@
 package org.example.service_impl;
 
+import org.example.model.Restaurant;
 import org.example.model.Review;
 import org.example.service.RestaurantRepository;
 import org.example.service.RestaurantService;
@@ -8,8 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,11 +24,9 @@ import static org.mockito.MockitoAnnotations.*;
 class RestaurantServiceImplTest {
 
     @Mock
-    private Review review;
-
-    @Mock
     private RestaurantRepository restaurantRepository;
     private RestaurantServiceImpl restaurantService;
+    private List<Review> mockReviewList;
 
 
 
@@ -38,7 +35,8 @@ class RestaurantServiceImplTest {
     public void beforeAll() {
 
         MockitoAnnotations.openMocks(this);
-         restaurantService = new RestaurantServiceImpl(restaurantRepository);
+        restaurantService = new RestaurantServiceImpl(restaurantRepository);
+        mockReviewList = Arrays.asList(new Review(1, 2, 5, "Testy Food", LocalDate.of(2023, 1, 24)));
     }
 
 
@@ -52,17 +50,19 @@ class RestaurantServiceImplTest {
     @Test
     public void retrieveAllReviewsGivenByParticularUserTest() {
 
-        when(restaurantRepository.allReviewsGivenByParticularUser(2)).thenReturn(Arrays.asList(new Review(1, 2, 5, "Testy Food", LocalDate.of(2023,01,24))));
+        int userId = 2;
 
-        List<Review> mockReviews = restaurantService.reviewsOfUser(2);
+        when(restaurantRepository.allReviewsGivenByParticularUser(userId)).thenReturn(mockReviewList);
 
-        assertEquals(mockReviews.size() ,1);
+        List<Review> mockReviews = restaurantService.reviewsOfUser(userId);
 
-        assertEquals(mockReviews.get(0).getRestaurantId() , 1);
+        assertEquals(1, mockReviews.size(), "Expected one review for user");
 
-        assertEquals(mockReviews.get(0).getComment() , "Testy Food");
+        assertEquals(1, mockReviews.get(0).getRestaurantId(), "Expected restaurant ID to be 1");
 
-        assertNotEquals(mockReviews.size(),4);
+        assertEquals("Testy Food", mockReviews.get(0).getComment(), "Expected comment to be 'Testy Food'");
+
+        assertNotEquals(4, mockReviews.size(), "Expected list size not to be 4");
 
 
     }
@@ -71,68 +71,107 @@ class RestaurantServiceImplTest {
     @Test
     void calculateTheAverageRatingOfTheRestaurant() {
 
-        assertEquals(restaurantService.calculateTheAverageRatingOfTheRestaurant(3),4.0);
+        int restaurantId1 = 3;
+        int restaurantId2 = 4;
+        int restaurantId3 = 2;
 
-        assertEquals(restaurantService.calculateTheAverageRatingOfTheRestaurant(4),3.75);
+        double avgRating1 = restaurantService.calculateTheAverageRatingOfTheRestaurant(restaurantId1);
+        double avgRating2 = restaurantService.calculateTheAverageRatingOfTheRestaurant(restaurantId2);
+        double avgRating3 = restaurantService.calculateTheAverageRatingOfTheRestaurant(restaurantId3);
 
-        assertNotEquals(restaurantService.calculateTheAverageRatingOfTheRestaurant(2) ,5);
+
+        assertEquals(4.0, avgRating1, "Average rating for restaurant 3 should be 4.0");
+
+        assertEquals(3.75, avgRating2, "Average rating for restaurant 4 should be 3.75");
+
+        assertNotEquals(5, avgRating3, "Average rating for restaurant 2 should not be 5");
     }
 
 
     @Test
     void findAllRestaurantsByName() {
 
-        assertEquals(restaurantService.findAllRestaurantsByName("Rambagh Palace").get(0), restaurantService.restaurantList.get(2));
+        String restaurantName1 = "Rambagh Palace";
+        String restaurantName2 = "Taj Falaknuma Palace";
+        String restaurantName3 = "Umaid Bhawan Palace";
+        String restaurantName4 = "Taj Hotel";
 
-        assertEquals(restaurantService.findAllRestaurantsByName("Taj Falaknuma Palace").get(0).getRestaurantId(),2);
 
-        assertEquals(restaurantService.findAllRestaurantsByName("Umaid Bhawan Palace").get(0).getLocation(),"Rajasthan");
+        List<Restaurant> foundRestaurants1 = restaurantService.findAllRestaurantsByName(restaurantName1);
+        List<Restaurant> foundRestaurants2 = restaurantService.findAllRestaurantsByName(restaurantName2);
+        List<Restaurant> foundRestaurants3 = restaurantService.findAllRestaurantsByName(restaurantName3);
+        List<Restaurant> foundRestaurants4 = restaurantService.findAllRestaurantsByName(restaurantName4);
 
-        assertEquals(restaurantService.findAllRestaurantsByName("Taj Hotel").size(), 2);
+
+        assertEquals(restaurantService.restaurantList.get(2), foundRestaurants1.get(0),
+                "Expected Rambagh Palace to match restaurant at index 2");
+        assertEquals(2, foundRestaurants2.get(0).getRestaurantId(),
+                "Expected restaurant ID for Taj Falaknuma Palace to be 2");
+        assertEquals("Rajasthan", foundRestaurants3.get(0).getLocation(),
+                "Expected location for Umaid Bhawan Palace to be Rajasthan");
+        assertEquals(2, foundRestaurants4.size(),
+                "Expected 2 restaurants for Taj Hotel");
     }
 
 
     @Test
     void retrieveAllReviewsForParticularRestaurant() {
 
-        assertEquals(restaurantService.retrieveAllReviewsForParticularRestaurant(1).size() ,2);
+        int restaurantId1 = 1;
+        int restaurantId2 = 2;
+        int restaurantId3 = 5;
 
-        assertEquals(restaurantService.retrieveAllReviewsForParticularRestaurant(2).get(0).getDate() ,LocalDate.of(2022,06,30));
+        List<Review> reviews1 = restaurantService.retrieveAllReviewsForParticularRestaurant(restaurantId1);
+        List<Review> reviews2 = restaurantService.retrieveAllReviewsForParticularRestaurant(restaurantId2);
+        List<Review> reviews3 = restaurantService.retrieveAllReviewsForParticularRestaurant(restaurantId3);
 
-        assertEquals(restaurantService.retrieveAllReviewsForParticularRestaurant(5).get(0).getComment() ,"Delicious Food");
+        assertEquals(2, reviews1.size(), "Expected 2 reviews for restaurant 1");
 
-        assertNotEquals(restaurantService.retrieveAllReviewsForParticularRestaurant(5).size(),3);
+        assertEquals(LocalDate.of(2022, 6, 30), reviews2.get(0).getDate(),
+                "Expected date for the first review of restaurant 2");
+
+        assertEquals("Delicious Food", reviews3.get(0).getComment(),
+                "Expected comment for the first review of restaurant 5");
+
+        assertNotEquals(3, reviews3.size(), "Expected not to have 3 reviews for restaurant 5");
     }
 
 
     @Test
     void findAllreviewsMadeInAParticularTime() {
 
-        assertEquals(restaurantService.findAllreviewsMadeInAParticularTime(LocalDate.of(2022,07,03)).size() ,3);
+        LocalDate targetDate1 = LocalDate.of(2022, 7, 3);
 
-        assertEquals(restaurantService.findAllreviewsMadeInAParticularTime(LocalDate.of(2021,05,12)).get(0).getRating() ,5);
+        List<Review> reviews1 = restaurantService.findAllreviewsMadeInAParticularTime(targetDate1);
 
-        assertEquals(restaurantService.findAllreviewsMadeInAParticularTime(LocalDate.of(2022,07,03)).get(0).getComment() ,"Spicy Food");
+        assertEquals(3, reviews1.size(), "Expected 3 reviews made on July 3, 2022");
+
+        assertEquals(5, reviews1.get(0).getRating(), "Expected rating 5 for the first review on May 12, 2021");
+
+        assertEquals("Spicy Food", reviews1.get(0).getComment(), "Expected comment 'Spicy Food' for July 3, 2022");
     }
 
     @Test
     void displayReviewsInChronologicalOrder() {
 
-       assertEquals(restaurantService.displayReviewsInChronologicalOrder().get(0).getComment(),"Delicious Food");
+        List<Review> reviews = restaurantService.displayReviewsInChronologicalOrder();
 
-       assertEquals(restaurantService.displayReviewsInChronologicalOrder().get(18).getComment(),"yummy Food");
+        assertEquals("Delicious Food", reviews.get(0).getComment(), "Expected first review to be 'Delicious Food'");
+
+        assertEquals("yummy Food", reviews.get(18).getComment(), "Expected 19th review to be 'yummy Food'");
     }
 
     @Test
     void topFiveReviewedRestaurants(){
 
-        assertEquals(restaurantService.topFiveReviewedRestaurants().get(0).getName(),"Taj Falaknuma Palace");
-
-        assertEquals(restaurantService.topFiveReviewedRestaurants().size(),5);
-
-        assertEquals(restaurantService.topFiveReviewedRestaurants().get(0).getRestaurantId(),2);
-
-        assertEquals(restaurantService.topFiveReviewedRestaurants().get(0).getLocation(),"Hyderabad");
+        List<Restaurant> topFiveReviewed = restaurantService.topFiveReviewedRestaurants();
+        assertEquals("Taj Falaknuma Palace", topFiveReviewed.get(0).getName(),
+                "Expected the top-reviewed restaurant to be 'Taj Falaknuma Palace'");
+        assertEquals(5, topFiveReviewed.size(), "Expected 5 top-reviewed restaurants");
+        assertEquals(2, topFiveReviewed.get(0).getRestaurantId(),
+                "Expected restaurant ID for the top-reviewed restaurant to be 2");
+        assertEquals("Hyderabad", topFiveReviewed.get(0).getLocation(),
+                "Expected location for the top-reviewed restaurant to be 'Hyderabad'");
 
 
     }
@@ -141,13 +180,12 @@ class RestaurantServiceImplTest {
     @Test
     void topFiveRatedRestaurants(){
 
-        assertEquals(restaurantService.topFiveRatedRestaurants().get(0).getName(),"Taj Hotel");
+        List<Restaurant> topFiveRated = restaurantService.topFiveRatedRestaurants();
 
-        assertEquals(restaurantService.topFiveRatedRestaurants().size(),5);
-
-        assertEquals(restaurantService.topFiveRatedRestaurants().get(0).getRestaurantId(),5);
-
-        assertEquals(restaurantService.topFiveRatedRestaurants().get(0).getLocation(),"Mumbai");
+        assertEquals("Taj Hotel", topFiveRated.get(0).getName(),"Expected the top-rated restaurant to be 'Taj Hotel'");
+        assertEquals(5, topFiveRated.size(), "Expected 5 top-rated restaurants");
+        assertEquals(5, topFiveRated.get(0).getRestaurantId(),"Expected restaurant ID for the top-rated restaurant to be 5");
+        assertEquals("Mumbai", topFiveRated.get(0).getLocation(),"Expected location for the top-rated restaurant to be 'Mumbai'");
     }
 
 }
