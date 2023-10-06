@@ -1,38 +1,12 @@
 
-h
-java:S1192""KDefine a constant instead of duplicating this literal "Testy Food" 3 times.(ÛÑ¯õ8Û´ãş­1
-h
-java:S1192("KDefine a constant instead of duplicating this literal "Spicy Food" 3 times.(û¹°±8Ü´ãş­1
-i
-java:S1192"GDefine a constant instead of duplicating this literal "Indian" 5 times.(Ä¤š¸üÿÿÿÿ8Ü´ãş­1
-k
-java:S1192!"ODefine a constant instead of duplicating this literal "Delicious Food" 3 times.(İË8Ü´ãş­1
-o
-java:S6204J"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ˆµãş­1
-o
-java:S6204R"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8‹µãş­1
-V
-java:S1611Z"4Remove the parentheses around the "review" parameter(Şíñ¹ıÿÿÿÿ8µãş­1
-`
-java:S1612Z">Replace this lambda with method reference 'Review::getRating'.(Şíñ¹ıÿÿÿÿ8µãş­1
+]	java:S1252"<This block of commented-out lines of code should be removed.(Æä‹şÿÿÿÿ8¤ìÒÓ¯1
+X	java:S1259"<This block of commented-out lines of code should be removed.(á¨¯Á8îÓÓ¯1
+]	java:S125@"<This block of commented-out lines of code should be removed.(’Ïëıüÿÿÿÿ8ß¡ÓÓ¯1
+e
+java:S1128"CRemove this unused import 'org.apache.tomcat.util.json.JSONParser'.(ö½¥¨ùÿÿÿÿ8ÏÃÒÓ¯1
 Q
-java:S1611]"4Remove the parentheses around the "review" parameter(—‚Ğ8•µãş­1
-[
-java:S1612]">Replace this lambda with method reference 'Review::getRating'.(—‚Ğ8–µãş­1
-H
-java:S1168f"+Return an empty collection instead of null.(¥¹ï8—µãş­1
-o
-java:S6204o"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8˜µãş­1
-F	java:S106q"+Replace this use of System.out by a logger.(Öûš8™µãş­1
-H
-java:S1168s"+Return an empty collection instead of null.(¥¹ï8™µãş­1
-H
-java:S1168x"+Return an empty collection instead of null.(¥¹ï8šµãş­1
-p
-java:S6204€"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8›µãş­1
-u
-java:S6204†"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(‘ÿ¨—úÿÿÿÿ8œµãş­1
-p
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8µãş­1
-X
-java:S1612˜":Replace this lambda with method reference 'Entry::getKey'.(³…›ç8ÜÕãş­1
+java:S1128"/Remove this unused import 'org.json.JSONArray'.(¬¸Ê’üÿÿÿÿ8ÏÃÒÓ¯1
+U
+java:S1128"3Remove this unused import 'org.json.JSONException'.(¹Ó·úÿÿÿÿ8ÏÃÒÓ¯1
+R
+java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8ÏÃÒÓ¯1

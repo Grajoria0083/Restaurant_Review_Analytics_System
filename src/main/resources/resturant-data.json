@@ -1,0 +1,32 @@
+[
+      {
+        "restaurantId": 1,
+        "name": "Taj Hotel",
+        "location": "Mumbai",
+        "cuisineType": "Indian"
+      },
+      {
+        "restaurantId": 2,
+        "name": "Taj Falaknuma Palace",
+        "location": "Hyderabad",
+        "cuisineType": "UK"
+      },
+      {
+        "restaurantId": 3,
+        "name": "Rambagh Palace",
+        "location": "Jaipur,",
+        "cuisineType": "Indian"
+      },
+      {
+        "restaurantId": 4,
+        "name": "Umaid Bhawan Palace",
+        "location": "Rajasthan",
+        "cuisineType": "Indian"
+      },
+      {
+        "restaurantId": 5,
+        "name": "Taj Hotel",
+        "location": "Mumbai",
+        "cuisineType": "Indian"
+      }
+    ]

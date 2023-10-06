@@ -1,38 +1,68 @@
 package org.example.service_impl;
 
-import org.example.model.Restaurant;
 import org.example.model.Review;
-import org.junit.jupiter.api.BeforeAll;
+import org.example.service.RestaurantRepository;
+import org.example.service.RestaurantService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.*;
+
 
 class RestaurantServiceImplTest {
 
-    private static RestaurantServiceImpl restaurantService;
+    @Mock
+    private Review review;
 
-    @BeforeAll
-    public static void beforeAll() {
-        restaurantService = new RestaurantServiceImpl();
+    @Mock
+    private RestaurantRepository restaurantRepository;
+    private RestaurantServiceImpl restaurantService;
+
+
+
+
+    @BeforeEach
+    public void beforeAll() {
+
+        MockitoAnnotations.openMocks(this);
+         restaurantService = new RestaurantServiceImpl(restaurantRepository);
     }
-    
+
 
 
     @Test
-    void retrieveAllReviewsGivenByParticularUserTest() {
+    public void addReview(){
+        Review review1 = mock(Review.class);
+    }
 
-        assertEquals(restaurantService.retrieveAllReviewsGivenByParticularUser(5).size() ,3);
 
-        assertEquals(restaurantService.retrieveAllReviewsGivenByParticularUser(2).get(0).getRestaurantId() , 1);
+    @Test
+    public void retrieveAllReviewsGivenByParticularUserTest() {
 
-        assertEquals(restaurantService.retrieveAllReviewsGivenByParticularUser(2).get(0).getComment() , "Testy Food");
+        when(restaurantRepository.allReviewsGivenByParticularUser(2)).thenReturn(Arrays.asList(new Review(1, 2, 5, "Testy Food", LocalDate.of(2023,01,24))));
 
-        assertEquals(restaurantService.retrieveAllReviewsGivenByParticularUser(10).size() ,0);
+        List<Review> mockReviews = restaurantService.reviewsOfUser(2);
 
-        assertNotEquals(restaurantService.retrieveAllReviewsGivenByParticularUser(5).size(),4);
+        assertEquals(mockReviews.size() ,1);
+
+        assertEquals(mockReviews.get(0).getRestaurantId() , 1);
+
+        assertEquals(mockReviews.get(0).getComment() , "Testy Food");
+
+        assertNotEquals(mockReviews.size(),4);
 
 
     }
@@ -52,7 +82,7 @@ class RestaurantServiceImplTest {
     @Test
     void findAllRestaurantsByName() {
 
-        assertEquals(restaurantService.findAllRestaurantsByName("Rambagh Palace").get(0), restaurantService.restaurantSet.get(2));
+        assertEquals(restaurantService.findAllRestaurantsByName("Rambagh Palace").get(0), restaurantService.restaurantList.get(2));
 
         assertEquals(restaurantService.findAllRestaurantsByName("Taj Falaknuma Palace").get(0).getRestaurantId(),2);
 

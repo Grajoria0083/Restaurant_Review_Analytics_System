@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface RestaurantService {
 
+
+
     List<Review> retrieveAllReviewsGivenByParticularUser(int id);
     List<Review> retrieveAllReviewsForParticularRestaurant(int id);
     double calculateTheAverageRatingOfTheRestaurant(int id);
@@ -19,4 +21,5 @@ public interface RestaurantService {
     List<Review> findAllreviewsMadeInAParticularTime(LocalDate date);
     List<Review> displayReviewsInChronologicalOrder();
     List<Restaurant> displayRestaurantsInOrderOfAverageRating();
+
 }

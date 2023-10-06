@@ -1,5 +1,22 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(üœ´ÿÿÿÿÿ8ÏÌèş­1
-]	java:S125"<This block of commented-out lines of code should be removed.(¢¢¬øÿÿÿÿ8ĞÌèş­1
-R
-java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8ÑÌèş­1
+L	java:S106"+Replace this use of System.out by a logger.(³ñ¹Ûşÿÿÿÿ8ú¥–ª¯1
+L	java:S106"+Replace this use of System.out by a logger.(¸ ±Ùùÿÿÿÿ8û¥–ª¯1
+L	java:S106"+Replace this use of System.out by a logger.(ü™ïíşÿÿÿÿ8û¥–ª¯1
+L	java:S106"+Replace this use of System.out by a logger.(™«ûÿÿÿÿ8ü¥–ª¯1
+F	java:S106"+Replace this use of System.out by a logger.(˜ĞY8ü¥–ª¯1
+L	java:S106"+Replace this use of System.out by a logger.(·‘ûûÿÿÿÿ8ü¥–ª¯1
+L	java:S106"+Replace this use of System.out by a logger.(Ãäîšÿÿÿÿÿ8ı¥–ª¯1
+G	java:S106"+Replace this use of System.out by a logger.(ÙêêÔ8ı¥–ª¯1
+G	java:S106"+Replace this use of System.out by a logger.(Š¢µî8ş¥–ª¯1
+L	java:S106"+Replace this use of System.out by a logger.(ëÜäÃşÿÿÿÿ8ş¥–ª¯1
+L	java:S106$"+Replace this use of System.out by a logger.(ØõŒşÿÿÿÿ8§ë†Ñ¯1
+G	java:S106'"+Replace this use of System.out by a logger.(®ƒ‰‚8¨ë†Ñ¯1
+G	java:S106*"+Replace this use of System.out by a logger.(š¦ÃË8©ë†Ñ¯1
+L	java:S106-"+Replace this use of System.out by a logger.(µœ¿şÿÿÿÿ8ªë†Ñ¯1
+L	java:S1060"+Replace this use of System.out by a logger.(êßÙ‰úÿÿÿÿ8¬ë†Ñ¯1
+L	java:S1066"+Replace this use of System.out by a logger.(øÍˆ˜ùÿÿÿÿ8®ë†Ñ¯1
+G	java:S1069"+Replace this use of System.out by a logger.(ÂîâÓ8®ë†Ñ¯1
+L	java:S106<"+Replace this use of System.out by a logger.(ç›Š§ûÿÿÿÿ8¯ë†Ñ¯1
+G	java:S106?"+Replace this use of System.out by a logger.(ó¶ÿÉ8°ë†Ñ¯1
+G	java:S106C"+Replace this use of System.out by a logger.(€»³¿8°ë†Ñ¯1
+]	java:S125M"<This block of commented-out lines of code should be removed.(¢¢¬øÿÿÿÿ8‹¦–ª¯1
